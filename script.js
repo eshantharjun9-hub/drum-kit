@@ -13,6 +13,15 @@ for (let i = 0; i < items; i++) {
 }
 document.addEventListener("keypress", function (event) {
   makeSound(event.key);
+  let activeButton = document.querySelector(`.${event.key}`);
+
+  if (activeButton) {
+    activeButton.classList.add("pressed");
+
+    setTimeout(() => {
+      activeButton.classList.remove("pressed");
+    }, 100);
+  }
 });
 
 function makeSound(key) {
