@@ -11,6 +11,7 @@ for (let i = 0; i < items; i++) {
     }, 100);
   });
 }
+
 document.addEventListener("keypress", function (event) {
   makeSound(event.key);
   let activeButton = document.querySelector(`.${event.key}`);
